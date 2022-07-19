@@ -1,3 +1,10 @@
+document.querySelector('.menu').addEventListener('click', function(e) {
+  document.querySelectorAll('.target').forEach(function(item){
+item.classList.toggle('change')
+  })
+}); 
+
+
 const icons = document.querySelectorAll('.section-1-icons i')
 let i = 1
 /** This method run the function over and over (Two arguments, function , and time) */
@@ -13,3 +20,4 @@ setInterval(() => {
     icon.nextElementSibling.classList.add('change')
   }
 }, 4000)
+

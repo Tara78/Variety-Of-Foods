@@ -13,6 +13,106 @@
 html{
   font-size: 62.5%;
 }
+
+/*NavBar*/
+.navbar{
+  width:100%;
+  height:14rem;
+  background-color: #000;
+  position:fixed;
+  top: -14rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: .2rem .2rem .2rem #000;
+  transition:top 0.4s 0.2s;
+}
+
+.navbar-link{
+  color:#aaa;
+  margin:.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition:color 0.3s, opacity 0.2s; 
+}
+
+.change .navbar-link{
+  opacity: 1;
+  
+}
+/* second element is for delay tp apper on the UI */
+.change .navbar-link:nth-child(1){
+  transition:opacity .4s .5s, color 0.3s;
+}
+.change .navbar-link:nth-child(2) {
+  transition: opacity .4s .6s color 0.3s;
+}
+.change .navbar-link:nth-child(3) {
+  transition: opacity .4s .7s color 0.3s;
+}
+.change .navbar-link:nth-child(4) {
+  transition: opacity .4s .8s color 0.3s;
+}
+.change .navbar-link:nth-child(5) {
+  transition: opacity .4s .9s color 0.3s;
+}
+
+.navbar-link:hover{
+  color: #fff;
+}
+
+.navbar-link i{
+  font-size:4rem;
+}
+
+.navbar-link span{
+  font-size:2.5rem;
+  font-weight:900;
+  letter-spacing: 0.2rem;
+  margin-top:0.5rem;
+}
+/* 0.2 is delay time */
+.navbar.change{
+top: 0;
+transition: top 0.4s 0.2s;
+}
+
+.menu{
+  width:4rem;
+  height: 6rem;
+  background-color:rgb(33, 30, 30);
+  position:fixed;
+  top:1rem;
+  left:5rem;
+  border-radius: 30rem 30rem 15rem 15rem ;
+  box-shadow: 1rem 1rem 1rem #000, 
+  -0.1rem -0.1rem 0.1rem #000;
+  cursor: pointer; 
+  transition: top .4s;
+}
+
+.menu.change{
+  top: 15rem;
+  transition: top 0.4s;
+}
+
+/*making line connected to the menu*/
+/* .menu::before{
+  content: "";
+  height: 15rem;
+  width: 0.3rem;
+  background-color: #000;
+  position: absolute;
+  top:-15rem;
+  left:calc(-0.15rem);
+  box-shadow: 0.1rem 0rem 0.1rem #000;
+
+} */
+
 /* Section One */
 .section-1{
   background-color: #333;
@@ -254,4 +354,106 @@ z-index:10 ;
   visibility: visible;
   transition: opacity 1s 1s;
 
+}
+
+/*Section 4 */
+.section-4 {
+  width: 100%;
+  height:30vh;
+  background-color: #222;
+  display: flex;
+  justify-content:space-around;
+  padding:3rem 0;
+  align-items: flex-start;
+  position: relative;
+  
+}
+.sction-4-text{
+  text-transform: uppercase;
+}
+.section-4-heading{
+  font-size: 2rem;
+  font-weight:900;
+  color:#a79a2d;
+}
+
+.section-4-paragraph{
+  font-size:1.5rem;
+  color:#888;
+}
+.signup-form{
+  display: flex;
+  align-items: center;
+}
+
+.signup-form-input{
+  width:35rem;
+  height: 5rem;
+  padding:1rem;
+  border:.2rem solid #a79a2d;
+  font-size: 1.6rem;
+  font-weight:700;
+  letter-spacing: .1rem;
+  color:#a79a2d;
+
+}
+
+.signup-form-input::placeholder{
+  color:#a79a2d;
+}
+
+.signup-form-btn{
+  position: relative;
+  left: -4.5em;
+  width: 4rem;
+  height: 4rem;
+  background-color: #333;
+  color: #a79a2d;
+  border:none;
+  font-size:1.8rem;
+  cursor: pointer;
+}
+.copyright{
+  position:absolute;
+  bottom:3rem;
+  color:white;
+  font-size: 1.7rem;
+  font-weight:200;
+  color: #eee;
+  letter-spacing:.1rem;
+  border-top:.1rem solid #888;
+  padding-top:6rem;
+  width:100%;
+  text-align: center;
+
+}
+
+/* Responsive */
+@media(max-width:1400px){
+  html{
+    font-size:50%;
+  }
+  .section-2{
+    height: auto;
+    padding:10rem 0 12rem 0;
+  }
+.cards-container{
+  margin-top:10rem;
+}
+.gallery-link{
+  width: 40rem;
+  height: 25rem;
+  margin:5rem;
+}
+.food-img{
+  width:100%; 
+  height: 100%;
+}
+
+}
+@media(max-width:1000px){
+  .section-heading{
+    font-size:9rem;
+    margin: 0.5rem;
+  }
 }
